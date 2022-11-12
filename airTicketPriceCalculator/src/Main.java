@@ -18,7 +18,7 @@ public class Main {
         if (distance>0){
             price = distance*perDistancePrice;
 
-            if (age<12){
+            if (age<12 && age>0){
                 ageDiscountedAmount = price*0.50;
                 discountedPrice = price-ageDiscountedAmount;
             } else if (age>=12 && age<=65) {
