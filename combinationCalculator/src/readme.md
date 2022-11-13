@@ -14,6 +14,12 @@ Eleman (n) sayısını girin : 5
 Seçim (r) sayısını girin : 3
 C(5,3) = 10
 ```
+## Other Projects
 
+Patika.dev Java 101 Camp
+[Click](https://github.com/mcancankaya/java101) for other projects
+
+My Patika.dev Profile :
+https://app.patika.dev/mcancankaya
 
   

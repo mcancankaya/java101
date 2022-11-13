@@ -6,13 +6,16 @@ public class Main {
         Scanner input = new Scanner(System.in);
 
         try{
-            System.out.print("n sayısını girin : ");
+            System.out.print("Eleman (n) sayısını girin : ");
             n = input.nextInt();
 
-            System.out.print("r sayısını girin : ");
+            System.out.print("Seçim (r) sayısını girin : ");
             r = input.nextInt();
-            if(n<=0 || r<=0){
-                System.out.println("0'dan büyük sayı girmelisiniz.");
+            if(n<0 || r<0){
+                System.out.println("N ve R sayıları 0 'dan küçük olamaz.");
+                return;
+            } else if (n<r) {
+                System.out.println("N, R sayısından küçük olamaz.");
                 return;
             }
             combination = (factorialCalculator(n)) / ((factorialCalculator(r) * factorialCalculator(n - r)));
@@ -20,7 +23,6 @@ public class Main {
         }catch (Exception exception){
             System.out.println("Hata oluştu.");
         }
-
 
     }
 
