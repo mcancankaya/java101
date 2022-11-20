@@ -35,6 +35,22 @@ public class Student {
             System.out.println(error+note3);
 
     }
+    void addBulkQuizNote(int note1,int note2,int note3){
+        String error="Invalid Note ! ";
+        if (note1>=0 &&note1<=100)
+            this.course1.setQuizNote(note1);
+        else
+            System.out.println(error+note1);
+        if (note2>=0 &&note2<=100)
+            this.course2.setQuizNote(note2);
+        else
+            System.out.println(error+note2);
+        if (note3>=0 && note3<=100)
+            this.course3.setQuizNote(note3);
+        else
+            System.out.println(error+note3);
+
+    }
 
     void printNoteInformations(){
         System.out.println(course1.getName()+" Note \t: "+course1.getNote());
@@ -44,8 +60,10 @@ public class Student {
     }
 
     void printIsPass(){
-        this.average = (this.course1.getNote()+this.course2.getNote()+this.course3.getNote())/3.0;
-        if (this.average>55){
+        double noteRate = ((this.course1.getNote()+this.course2.getNote()+this.course3.getNote())/3.0)*0.80;
+        double quizRate = ((this.course1.getQuizNote()+this.course2.getQuizNote()+this.course3.getQuizNote())/3.0)*0.20;
+        this.setAverage(noteRate+quizRate);
+        if (this.getAverage()>55){
             System.out.println("You passed the class.");
             this.setIsPass(true);
         }else{

@@ -4,6 +4,7 @@ public class Course {
     private String code;
     private String prefix;
     private int note;
+    private int quizNote;
 
     public Course(String name, String code,String prefix,int note){
 
@@ -11,6 +12,7 @@ public class Course {
         this.code = code;
         this.prefix=prefix;
         this.note=note;
+        this.quizNote=0;
     }
 
     void getPrintTeacherInfo(){
@@ -61,5 +63,13 @@ public class Course {
 
     public void setNote(int note) {
         this.note = note;
+    }
+
+    public int getQuizNote() {
+        return quizNote;
+    }
+
+    public void setQuizNote(int quizNote) {
+        this.quizNote = quizNote;
     }
 }

@@ -14,7 +14,8 @@ public class Main {
         course3.setTeacher(teacher3);
 
         Student student1 = new Student(course1,course2,course3,"Can","12345","4");
-        student1.addBulkExamNote(1,50,75);
+        student1.addBulkExamNote(50,50,75);
+        student1.addBulkQuizNote(50,50,50);
         student1.printIsPass();
     }
 }
